@@ -1,2 +1,2 @@
 clean:
-	rm *.pdf *.toc *.aux *.log *.synctex.gz
+	rm *.pdf *.toc *.aux *.log *.synctex.gz *.out
