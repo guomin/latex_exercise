@@ -1,0 +1,17 @@
+digraph G {
+	rankdir=BT;
+
+	tuhao -> guangrui_liu;
+	guangrui_liu -> tuhao;
+
+	guangrui_liu -> girl1;
+	guangrui_liu -> girl2;
+	guangrui_liu -> girl3;
+	guangrui_liu -> girl4;
+	guangrui_liu -> girl5;
+	guangrui_liu -> girl6;
+	guangrui_liu -> girl7;
+	guangrui_liu -> girl8;
+	guangrui_liu -> girl9;
+
+}
