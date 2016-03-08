@@ -1,0 +1,39 @@
+digraph g {
+	graph [
+		rankdir = "LR"
+	];
+	node [
+		fontsize = "16"
+		shape = "ellipse"
+	];
+	edge [];
+
+	"user" [
+		label = "User|<id> id|username|password|last|status"
+		shape = "record"
+	];
+	"profile" [
+		label = "Profile|<id> id|<pid>pid|name|status"
+		shape = "record"
+	];
+	user:id->profile:id[label="1:1"];
+
+	"category" [
+		label="Category|<id>id|<pid>pid|name|status"
+		shape="record"
+	];
+	category:pid->category:id[label="1:n"];
+	"article" [
+		label = "Article|<id> id|<user_id> user_id|<cid> category_id|title|content|datetime|status"
+		shape="record"
+	];
+	article:user_id->user:id[label="1:n"];
+	article:cid->category:id[label="1:n"];
+	
+	"feedback" [
+		label = "Feedback|<id> id|<user_id>user_id|<article_id>article_id|title|content|datetime|status";
+		shape = "record";
+	];
+	feedback:user_id->user:id[label="1:n"];
+	feedback:article_id->article:id[label="1:n"];
+}
